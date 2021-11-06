@@ -1,0 +1,33 @@
+python -m venv venv
+venv\bin\activate
+
+pip install
+django-admin startproject core .
+
+other commands
+--------------
+python manage.py makemigrations --dry-run --verbosity 3
+python manage.py runserver
+python manage.py createsuperuser
+pip install coverage
+coverage run --omit="*/venv/*" manage.py test
+coverage html
+pip install djangorestframework
+pip install django-cors-headers
+python manage.py startapp users
+python manage.py shell
+---------------
+
+pip install -r requirements.txt
+pip freeze > requirements.txt
+
+
+// ISSUES I FACED AND THEIR SOLUTIONS
+- Installing Pillow: Install it via MSY2 MINGW and copy the pillow package from the mingw64 folder to your
+project's venv folder
+
+- Writing custom api views: Read the restframework docs and try to overwrite generic views with custom 
+functionality rather than creating custom views from scratch
+
+- Finding how to do a certain thing: Google, StackOverflow, search Github for similar projects, ask seniors
+for help, experiment.
